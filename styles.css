@@ -18,6 +18,14 @@ body {
   margin: 10px;
   font-weight: 800;
   font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+#solar_img {
+  height: 25px;
+  width: 100px;
+  border-radius: 10px;
 }
 
 .screen {
@@ -27,7 +35,7 @@ body {
   border: 3px inset white;
   border-radius: 10px;
   box-shadow: 2px 2px 4px 5px inset black;
-  background-image: linear-gradient(to bottom, white, lightgray);
+  background-image: linear-gradient(to bottom, white, #00D7FF);
   display: inline-flex;
   justify-content: flex-end;
 }
@@ -67,7 +75,7 @@ body {
 }
 
 .label {
-  background-image: linear-gradient(to bottom, #ffffff, #8c8c8c);
+  background-image: linear-gradient(to bottom, #ffffff, #00FFAB);
   width: 65px;
   height: 65px;
   box-shadow: 2px 2px black;
@@ -83,11 +91,11 @@ body {
 }
 
 .operator {
-  background-image: linear-gradient(to bottom, #8a8a8a, #171717);
+  background-image: linear-gradient(to bottom, #E3F4F4, #171717);
   color: white;
 }
 
 .clear {
-  background-image: linear-gradient(to bottom, #ff5c5c, #d10000);
+  background-image: linear-gradient(to bottom, #FF9B9B, #FF0060);
   color: white;
 }

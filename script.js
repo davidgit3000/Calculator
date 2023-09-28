@@ -1,6 +1,6 @@
 let operand = [];
 let nums = [];
-let result = 0;
+let result = "N/A";
 
 function display(id) {
   let val = document.getElementById(id).value;

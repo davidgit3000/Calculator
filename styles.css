@@ -35,7 +35,7 @@ body {
   border: 3px inset white;
   border-radius: 10px;
   box-shadow: 2px 2px 4px 5px inset black;
-  background-image: linear-gradient(to bottom, white, #00D7FF);
+  background-image: linear-gradient(to bottom, white, #00d7ff);
   display: inline-flex;
   justify-content: flex-end;
 }
@@ -75,7 +75,7 @@ body {
 }
 
 .label {
-  background-image: linear-gradient(to bottom, #ffffff, #00FFAB);
+  background-image: linear-gradient(to bottom, #ffffff, #888888);
   width: 65px;
   height: 65px;
   box-shadow: 2px 2px black;
@@ -91,11 +91,16 @@ body {
 }
 
 .operator {
-  background-image: linear-gradient(to bottom, #E3F4F4, #171717);
+  background-image: linear-gradient(to bottom, #e3f4f4, #171717);
   color: white;
 }
 
+#btn_equal {
+  background-image: linear-gradient(to bottom, #00ffab, #4E9F3D);
+  color: #191A19;
+}
+
 .clear {
-  background-image: linear-gradient(to bottom, #FF9B9B, #FF0060);
+  background-image: linear-gradient(to bottom, #ff9b9b, #ff0060);
   color: white;
 }

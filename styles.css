@@ -75,7 +75,7 @@ body {
 }
 
 .label {
-  background-image: linear-gradient(to bottom, #ffffff, #888888);
+  background-image: linear-gradient(to bottom, #ffffff, #00d7ff);
   width: 65px;
   height: 65px;
   box-shadow: 2px 2px black;

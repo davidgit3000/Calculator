@@ -96,8 +96,7 @@ body {
 }
 
 #btn_equal {
-  background-image: linear-gradient(to bottom, #00ffab, #4E9F3D);
-  color: #191A19;
+  background-image: linear-gradient(to bottom, #00ffab, #4e9f3d);
 }
 
 .clear {

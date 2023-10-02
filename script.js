@@ -62,7 +62,8 @@ function processPrioritizedOperator(op) {
 
     nums.splice(location - 1, 3);
     nums.splice(location - 1, 0, intermidateResult);
-    location = nums.indexOf(op, location + 1);
+    console.log(nums);
+    location = nums.indexOf(op);
   }
 }
 

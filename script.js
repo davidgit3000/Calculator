@@ -1,11 +1,12 @@
 let operand = [];
 let nums = [];
+let numOperators = 0;
 let result = 0;
 
 function display(id) {
   let val = document.getElementById(id).value;
   operand.push(val);
-  // console.log(operand);
+  console.log(operand);
   document.getElementById("content").innerHTML += val;
 }
 
@@ -22,31 +23,89 @@ function getOperand() {
     }
   }
   nums.push(parseInt(numString, 10));
+  console.log(nums);
+}
+
+function countOperators() {
+  for (let num of nums) {
+    if (typeof num == "string") {
+      numOperators++;
+    }
+  }
+  console.log(numOperators);
+}
+
+function calcSingleOperation() {
+  for (let i = 1; i < nums.length; i = i + 2) {
+    if (nums[i] == "+") {
+      result += add(i);
+    } else if (nums[i] == "−") {
+      result += subtract(i);
+    } else if (nums[i] == "×") {
+      result += multiply(i);
+    } else if (nums[i] == "/") {
+      result += divide(i);
+    }
+  }
+}
+
+function processPrioritizedOperator(op) {
+  let location = nums.indexOf(op);
+  let intermidateResult = 0;
+
+  while (location != -1) {
+    if (op == "/") {
+      intermidateResult = divide(location);
+    } else if (op == "×") {
+      intermidateResult = multiply(location);
+    }
+
+    nums.splice(location - 1, 3);
+    nums.splice(location - 1, 0, intermidateResult);
+    location = nums.indexOf(op, location + 1);
+  }
+}
+
+function calcMultiOperations() {
+  processPrioritizedOperator("/");
+  processPrioritizedOperator("×");
+
   // console.log(nums);
+  if (nums.includes("+") || nums.includes("−")) {
+    let i = 1;
+    while (nums.length > 1) {
+      result = 0;
+      if (nums[i] == "+") {
+        result += add(i);
+        console.log(result);
+      } else if (nums[i] == "−") {
+        result += subtract(i);
+      }
+      nums.splice(i - 1, 3);
+      nums.splice(i - 1, 0, result);
+      console.log(nums);
+    }
+  } else {
+    result = nums[0];
+  }
 }
 
 function getResult() {
   getOperand();
+  countOperators();
 
-  for (let i = 1; i < nums.length; i = i + 2) {
-    if (nums[i] == "×" || nums[i] == "/") {
-      if (nums[i] == "×") {
-        result += multiply(i);
-      } else if (nums[i] == "/") {
-        result += divide(i);
-      }
-    } else if (nums[i] == "+") {
-      result += add(i);
-      // console.log(result);
-    } else if (nums[i] == "−") {
-      result += subtract(i);
-    }
+  if (numOperators == 1) {
+    calcSingleOperation();
+  } else {
+    calcMultiOperations();
   }
-  // console.log(result);
+
+  console.log(result);
   document.getElementById("content").innerHTML = result;
   clearOperand();
   clearNums();
   operand.push(result);
+  numOperators = 0;
   result = 0;
 }
 

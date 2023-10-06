@@ -152,11 +152,3 @@ function clearAll() {
   clearNums();
   return (document.getElementById("content").innerHTML = "");
 }
-
-function toString(op) {
-  let num = "";
-  for (let i = 0; i < op.length; i++) {
-    num += op[i];
-  }
-  return num;
-}

@@ -16,8 +16,8 @@ body {
   border: 0.125rem solid black; /* 2px => 2/16 = 0.125rem */
   box-shadow: 0.3125rem 0.3125rem #3b3b3b; /* 5px => 5/16 = 0.3125rem */
   border-radius: 0.625rem; /* 10px => 10/16 = 0.625rem */
-  width: 20rem;
-  height: 46rem;
+  width: 30rem;
+  height: 37rem;
   display: grid;
   grid-template-rows: 1rem 7.5rem 20rem;
 }
@@ -39,7 +39,7 @@ body {
 
 .screen {
   height: 5.2rem;
-  width: 18.5rem;
+  width: 28.5rem;
   margin: 1.875rem 0.625rem 1.25rem 0.625rem;
   border: 0.1875rem inset white;
   border-radius: 0.625rem;
@@ -117,8 +117,12 @@ body {
   color: white;
 }
 
-.scentific_computing {
+.del {
   font-size: 1.5rem;
+}
+
+.scentific_computing {
+  font-size: 1.25rem;
   background-image: linear-gradient(to bottom, #f0bc9e, #bd3f09);
   color: white;
 }
@@ -129,10 +133,12 @@ body {
 @media screen and (max-width: 1000px) {
   /* Scale down the frame and overall dimensions */
   .frame {
-    width: 16rem;   /* reduced from 20rem */
-    height: 37rem;  /* reduced from 46rem */
+    /* width: 30rem; */
+  /* height: 37rem; */
+    width: 25rem;   /* reduced from 20rem */
+    height: 31.5rem;  /* reduced from 46rem */
     display: grid;
-  grid-template-rows: 1rem 5.5rem 20rem;
+    grid-template-rows: 1rem 5.5rem 20rem;
   }
 
   /* Smaller brand section */
@@ -148,7 +154,7 @@ body {
   /* Smaller screen area */
   .screen {
     height: 4rem;    /* reduced from 5.2rem */
-    width: 14.8rem;    /* reduced from 18.5rem */
+    width: 23.75rem;    /* reduced from 18.5rem */
     margin: 1rem 0.5rem; /* tightened margins */
     box-shadow: 0.0625rem 0.0625rem 0.125rem 0.1875rem inset black;
   }
@@ -164,7 +170,7 @@ body {
   /* Button grid adjustments */
   .button-grid {
     margin: 0.5rem;
-    gap: 0.2rem; /* slightly smaller gap */
+    gap: 0.5rem; /* slightly smaller gap */
   }
 
   /* Individual button size & font-size */
@@ -176,6 +182,10 @@ body {
 
   /* Adjust the scientific function font-size if needed */
   .scentific_computing {
-    font-size: 1.125rem; /* reduced from 1.5rem */
+    font-size: 1rem; /* reduced from 1.5rem */
+  }
+
+  .del {
+    font-size: 1rem;
   }
 }

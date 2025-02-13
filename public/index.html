@@ -30,38 +30,7 @@
       </div>
 
       <div class="button-grid">
-        <button
-          class="label scentific_computing"
-          id="btn_dot"
-          value="."
-          onclick="display(this.id)"
-        >
-          &#8226;
-        </button>
-        <button
-          class="label scentific_computing"
-          id="btn_deg"
-          value="deg"
-          onclick="display(this.id)"
-        >
-          deg
-        </button>
-        <button
-          class="label scentific_computing"
-          id="btn_rad"
-          value="rad"
-          onclick="display(this.id)"
-        >
-          rad
-        </button>
-        <button
-          class="label scentific_computing"
-          id="btn_pi"
-          value="pi"
-          onclick="display(this.id)"
-        >
-          &#x3C0;
-        </button>
+        <!-- Row 1 -->
         <button
           class="label scentific_computing"
           id="btn_open_parenthesis"
@@ -80,6 +49,40 @@
         </button>
         <button
           class="label scentific_computing"
+          id="btn_factorial"
+          value="!"
+          onclick="display(this.id)"
+        >
+          !
+        </button>
+        <button
+          class="label scentific_computing"
+          id="btn_e"
+          value="e"
+          onclick="display(this.id)"
+        >
+          e
+        </button>
+        <button
+          class="label scentific_computing"
+          id="btn_rad"
+          value=" rad"
+          onclick="display(this.id)"
+        >
+          rad
+        </button>
+        <button
+          class="label scentific_computing"
+          id="btn_pi"
+          value="pi"
+          onclick="display(this.id)"
+        >
+          &#x3C0;
+        </button>
+
+        <!-- Row 2 -->
+        <button
+          class="label scentific_computing"
           id="btn_log"
           value="log"
           onclick="display(this.id)"
@@ -89,58 +92,10 @@
         <button
           class="label scentific_computing"
           id="btn_ln"
-          value="ln"
+          value="ln("
           onclick="display(this.id)"
         >
           ln
-        </button>
-        <button
-          class="label scentific_computing"
-          id="btn_sin"
-          value="sin"
-          onclick="display(this.id)"
-        >
-          sin
-        </button>
-        <button
-          class="label scentific_computing"
-          id="btn_cos"
-          value="cos"
-          onclick="display(this.id)"
-        >
-          cos
-        </button>
-        <button
-          class="label scentific_computing"
-          id="btn_tan"
-          value="tan"
-          onclick="display(this.id)"
-        >
-          tan
-        </button>
-        <button
-          class="label scentific_computing"
-          id="btn_cot"
-          value="cot"
-          onclick="display(this.id)"
-        >
-          cot
-        </button>
-        <button
-          class="label scentific_computing"
-          id="btn_sec"
-          value="sec"
-          onclick="display(this.id)"
-        >
-          sec
-        </button>
-        <button
-          class="label scentific_computing"
-          id="btn_csc"
-          value="csc"
-          onclick="display(this.id)"
-        >
-          csc
         </button>
         <button
           class="label scentific_computing"
@@ -150,16 +105,80 @@
         >
           ^
         </button>
-
         <button
           class="label scentific_computing"
-          id="btn_e"
-          value="e"
+          id="btn_sqrt"
+          value="√"
           onclick="display(this.id)"
         >
-          e
+          √
         </button>
-
+        <button
+          class="label scentific_computing"
+          id="btn_sin"
+          value="sin("
+          onclick="display(this.id)"
+        >
+          sin
+        </button>
+        <button
+          class="label scentific_computing"
+          id="btn_cos"
+          value="cos("
+          onclick="display(this.id)"
+        >
+          cos
+        </button>
+        <!-- Row 3 -->
+        <button
+          class="label scentific_computing"
+          id="btn_tan"
+          value="tan("
+          onclick="display(this.id)"
+        >
+          tan
+        </button>
+        <button
+          class="label scentific_computing"
+          id="btn_sec"
+          value="sec("
+          onclick="display(this.id)"
+        >
+          sec
+        </button>
+        <button
+          class="label scentific_computing"
+          id="btn_csc"
+          value="csc("
+          onclick="display(this.id)"
+        >
+          csc
+        </button>
+        <button
+          class="label scentific_computing"
+          id="btn_arcsin"
+          value="arcsin("
+          onclick="display(this.id)"
+        >
+          sin<sup>-1</sup>
+        </button>
+        <button
+          class="label scentific_computing"
+          id="btn_arccos"
+          value="arccos("
+          onclick="display(this.id)"
+        >
+          cos<sup>-1</sup>
+        </button>
+        <button
+          class="label scentific_computing"
+          id="btn_arctan"
+          value="arctan("
+          onclick="display(this.id)"
+        >
+          tan<sup>-1</sup>
+        </button>
+        <!-- Row 4 -->
         <button class="label" id="btn_7" value="7" onclick="display(this.id)">
           7
         </button>
@@ -177,18 +196,6 @@
         >
           +
         </button>
-
-        <button class="label" id="btn_4" value="4" onclick="display(this.id)">
-          4
-        </button>
-
-        <button class="label" id="btn_5" value="5" onclick="display(this.id)">
-          5
-        </button>
-
-        <button class="label" id="btn_6" value="6" onclick="display(this.id)">
-          6
-        </button>
         <button
           class="label operator"
           id="btn_minus"
@@ -197,7 +204,40 @@
         >
           −
         </button>
+        <button class="label clear" id="btn_clear" onclick="clearAll()">
+          C
+        </button>
+        <!-- Row 5 -->
+        <button class="label" id="btn_4" value="4" onclick="display(this.id)">
+          4
+        </button>
+        <button class="label" id="btn_5" value="5" onclick="display(this.id)">
+          5
+        </button>
+        <button class="label" id="btn_6" value="6" onclick="display(this.id)">
+          6
+        </button>
 
+        <button
+          class="label operator"
+          id="btn_x"
+          value="*"
+          onclick="display(this.id)"
+        >
+          ×
+        </button>
+        <button
+          class="label operator"
+          id="btn_divide"
+          value="/"
+          onclick="display(this.id)"
+        >
+          /
+        </button>
+        <button class="label clear del" id="btn_clear" onclick="backspace()">
+          DEL
+        </button>
+        <!-- Row 6 -->
         <button class="label" id="btn_1" value="1" onclick="display(this.id)">
           1
         </button>
@@ -207,37 +247,14 @@
         <button class="label" id="btn_3" value="3" onclick="display(this.id)">
           3
         </button>
-        <button
-          class="label operator"
-          id="btn_x"
-          value="*"
-          onclick="display(this.id)"
-        >
-          ×
-        </button>
-
-        <button
-          class="label clear"
-          id="btn_clear"
-          value="C"
-          onclick="clearAll()"
-        >
-          C
-        </button>
         <button class="label" id="btn_0" value="0" onclick="display(this.id)">
           0
         </button>
-
+        <button class="label" id="btn_dot" value="." onclick="display(this.id)">
+          &#8226;
+        </button>
         <button class="label operator" id="btn_equal" onclick="handleCompute()">
           =
-        </button>
-        <button
-          class="label operator"
-          id="btn_divide"
-          value="/"
-          onclick="display(this.id)"
-        >
-          /
         </button>
 
         <script src="script.js"></script>

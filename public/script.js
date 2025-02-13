@@ -3,9 +3,11 @@
 // 2. Evaluate expressions with Power, Trigonometric, Log and Exponential functions
 // 3. Utilize Prompt Engineering and OpenAI's API for ChatGPT to evaluate user expressions
 
-const API_URL = "https://calculator-ai.onrender.com";
+// const API_URL = "https://calculator-ai.onrender.com";
+const API_URL = "http://localhost:5000";
 
 let content = document.getElementById("content");
+
 // Display values on the screen
 function display(id) {
   // Get value from the selected button
@@ -17,6 +19,9 @@ function display(id) {
   content.scrollLeft = content.scrollWidth;
 }
 
+function backspace() {
+  content.innerHTML = content.innerHTML.slice(0, -1);
+}
 // Perform 4 basic arithmetic operations using stack data structure with possible parentheses cases (Parentheses has precedence over other operators)
 // TODO: Add parenthees support in calculations
 function compute() {
@@ -94,6 +99,8 @@ function handleCompute() {
 
   // List any advanced operators or function names you want to detect
   const advancedTokens = [
+    "!",
+    "√",
     "(",
     ")",
     ".",
@@ -101,7 +108,6 @@ function handleCompute() {
     "sin",
     "cos",
     "tan",
-    "cot",
     "sec",
     "csc",
     "log",
@@ -133,5 +139,6 @@ function clearAll() {
 // Bug #2: Two operators exisiting in a row failed to produce the same result (i.e., 9-+5=14 rather than 4 while 9+-5=4)
 // Bug #3: Frontend: Button layout not expected as in the design
 // Bug #4: Failure to get response form OpenAPI's API due to invalid model name
+// Bug #5: Failure to get correct results for trigonometric functions in radians
 
 // Date worked: 02/09/2024, 02/10/2024, 02/11/2024

@@ -9,8 +9,7 @@ export const computeAdvanced = async (req, res) => {
     const userExpression = req.body.expression; // e.g. "sin(45) + 2^3"
 
     // Construct a prompt telling the model to compute or evaluate the expression
-    const prompt = `Compute the value of the expression accurately: ${userExpression}.
-    Return ONLY the numeric result.`;
+    const systemMessage = `You are a math assistant. Interpret all angles as degrees unless I explicitly type 'rad'. When the expression includes "rad", compute trig functions exactly in radians. Otherwise, compute trig functions exactly in degrees. Return ONLY the numeric result, nothing else.`;
 
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
@@ -19,10 +18,10 @@ export const computeAdvanced = async (req, res) => {
         Authorization: `Bearer ${OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "gpt-4o-mini",
+        model: "gpt-4o",
         messages: [
-          { role: "system", content: "You are a helpful calculator" },
-          { role: "user", content: prompt },
+          { role: "system", content: systemMessage },
+          { role: "user", content: userExpression },
         ],
         max_tokens: 100,
         temperature: 0,

@@ -3,6 +3,11 @@
 // 2. Evaluate expressions with Power, Trigonometric, Log and Exponential functions
 // 3. Utilize Prompt Engineering and OpenAI's API for ChatGPT to evaluate user expressions
 
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const API_URL = process.env.API_URL || "http://localhost:5000";
 let content = document.getElementById("content");
 // Display values on the screen
 function display(id) {
@@ -70,7 +75,7 @@ async function evaluate() {
   }
 
   try {
-    const response = await fetch("http://localhost:5000/advanced-computing", {
+    const response = await fetch(`${API_URL}/advanced-computing`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ expression: expression }),

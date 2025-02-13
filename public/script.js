@@ -3,8 +3,8 @@
 // 2. Evaluate expressions with Power, Trigonometric, Log and Exponential functions
 // 3. Utilize Prompt Engineering and OpenAI's API for ChatGPT to evaluate user expressions
 
-// const API_URL = "https://calculator-ai.onrender.com";
-const API_URL = "http://localhost:5000";
+const API_URL = "https://calculator-ai.onrender.com";
+// const API_URL = "http://localhost:5000";
 
 let content = document.getElementById("content");
 
